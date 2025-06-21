@@ -69,3 +69,7 @@ output.wav: your synthesized speech audio
 
 # Step 9: Play and Save the Output
 play output.wav
+
+# Step 10: Full Batch Synthesis Script: All Emotions, All Files (Optional)
+Run it:
+./batch_synth_all.sh
