@@ -34,7 +34,7 @@ fish-speech/
       ├── ... (other emotions)
       └── thorsten-emotional-metadata.csv
 
-Step 6: Extract Codes (.npy) from a WAV File
+# Step 6: Extract Codes (.npy) from a WAV File
 Run this from inside your fish-speech directory:
 
 python3 fish_speech/models/dac/inference.py \
