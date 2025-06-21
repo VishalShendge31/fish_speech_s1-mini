@@ -36,6 +36,7 @@ fish-speech/
 
 Step 6: Extract Codes (.npy) from a WAV File
 Run this from inside your fish-speech directory:
+
 python3 fish_speech/models/dac/inference.py \
   -i data/thorsten-emotional_v02/amused/0aaf116f8774a140909231e0b610dc98.wav \
   -o codes_0.wav \
@@ -47,6 +48,7 @@ codes_0.wav: reconstructed audio (not needed for next step)
 codes_0.npy: VQ codes (used as prompt tokens below)
 
 # Step 7: Generate Semantic Tokens (Text2Semantic Inference)
+
 python3 fish_speech/models/text2semantic/inference.py \
   --text "Dies ist ein Beispielsatz für Sprachsynthese." \
   --prompt-text "amused" \
@@ -58,6 +60,7 @@ This creates:
 temp/codes_0.npy: semantic tokens for final decoding
 
 # Step 8: Decode to Synthesized Audio
+
 python3 fish_speech/models/dac/inference.py \
   -i temp/codes_0.npy \
   -o output.wav \
